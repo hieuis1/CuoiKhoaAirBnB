@@ -1,0 +1,49 @@
+@import '../../../styles/mixin.scss';
+#banner{
+    position: relative;
+    .banner-text{
+        width: 540px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%,-50%);
+        
+        color: white;
+        video{
+            filter: grayscale(80%);
+        }
+        h1{
+            font-size: 50px;
+            font-weight: 700;
+            text-shadow: 3px 3px #504e4e;
+        }
+        p{
+            margin: 20px 0;
+            text-shadow: 3px 3px #504e4e;
+        }
+        button{
+            background-color: rgb(255, 56, 92);
+            width: 200px;
+            height: 40px;
+        }
+        
+        
+    }
+}
+
+@include respond(small){
+    .banner-text{
+        h1{
+            font-size: 40px !important;
+            width: 450px;
+            text-align: center;
+            margin-left: 46px;
+        }
+        p{
+            font-size: 15px;
+            width: 400px;
+            margin-left: 70px !important;
+        }
+    }
+}

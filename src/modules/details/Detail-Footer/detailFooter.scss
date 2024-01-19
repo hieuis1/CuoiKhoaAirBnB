@@ -1,0 +1,29 @@
+#detail-footer{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 50px;
+    .detail-footer-head{
+        display: flex;
+        justify-content: center;
+        
+        h2{
+            font-size: 70px;
+            margin-bottom: 60px;
+            font-weight: 500;
+        }
+    }
+    .detail-footer-head-text{
+        h3{
+            text-align: center;
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        p{
+            width: 30%;
+            margin: auto;
+            text-align: center;
+            color: gray;
+        }
+    }
+}

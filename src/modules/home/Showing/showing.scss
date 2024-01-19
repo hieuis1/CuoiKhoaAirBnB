@@ -1,0 +1,38 @@
+#showing{
+  margin-top: 50px;
+  .card{
+    border: none;
+    cursor: pointer;
+    .mota{
+      color: rgb(108, 104, 104);
+    }
+  }
+  img{
+    height: 300px;
+    object-fit: cover;
+  }
+  .price{
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .convice{
+    span{
+      font-size: 12px;
+    }
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    .convice-item{
+  
+      text-align: center;
+      border-radius: 9999px;
+      padding-bottom: 3px;
+      background-color: #f8f4f4dd;
+    }
+  }
+}
+.showing-title{
+  font-weight: 500;
+  font-size: 30px;
+  margin: 20px 0;
+}

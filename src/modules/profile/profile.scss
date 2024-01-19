@@ -1,0 +1,103 @@
+#profile{
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 30px;
+    .profile-head{
+        text-align: center;
+        img{
+            width: 130px;
+            height: 130px;
+            display: block;
+            margin: 10px auto;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        a{
+            text-decoration: underline;
+            
+        }
+    }
+    .profile-body{
+        .profile-body-icon{
+            margin: 10px 0;
+        }
+        .profile-body-text{
+            h3{
+                font-weight: 500;
+                font-size: 18px;
+                margin-bottom: 10px;
+
+            }
+            p{
+                font-size: 15px;
+                color: #777575;
+                margin-bottom: 10px;
+            }
+            button{
+                color: black;
+                border: 1px solid black;
+                height: 40px;
+                width: 150px;
+            }
+        }
+    }
+    .profile-bot{
+        border-top: 1px solid #ccc;
+        margin-top: 20px;
+        padding-top: 20px;
+        h3{
+            font-weight: 500;
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+    }
+}
+#profile-right{
+    
+    h2{
+        font-size: 30px;
+        font-weight: 500;
+
+    }
+    .start{
+        font-size: 15px;
+        margin: 5px 0;
+        color: #757474;
+    }
+    .change{
+
+    }
+}
+.modal{
+    z-index: 99999 !important;
+    top: 20%;
+}
+input:focus{
+    outline: none;
+    box-shadow: none !important;
+}
+.MuiPopper-root {
+    z-index: 9999999 !important;
+}
+#uploadAvatar{
+    width: 30vw;
+    height: 500px;
+    border: 1px solid #ccc;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    display: none;
+}
+#overlayAvatar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: rgba($color: gray, $alpha: 0.7);
+    display: none;
+}

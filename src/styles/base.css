@@ -1,0 +1,30 @@
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  /* overflow-x: hidden; */
+  
+}
+
+.truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.truncate--2 {
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+}
+
+.truncate--3 {
+  -webkit-line-clamp: 3;
+  word-break: break-all;
+}

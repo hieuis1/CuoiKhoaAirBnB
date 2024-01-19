@@ -1,0 +1,50 @@
+@import '../../../styles/mixin.scss';
+
+#viTri{
+    padding-bottom: 60px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-top: 50px;
+    h2{
+        font-weight: 500;
+        font-size: 30px;
+        margin-bottom: 50px;
+        padding-top:20px ;
+    }
+    .vitri-list{
+
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        row-gap: 20px;
+        img{
+            border-radius: 10px;
+        }
+        .vitri-list-item{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            .vitri-item-right{
+                h5{
+                    font-weight: 500;
+                    font-size: 19px;
+                }
+                p{
+                    color: #ccc;
+                }
+            }
+        }
+    }
+}
+
+@include respond(medium){
+    .vitri-list{
+        grid-template-columns: repeat(3,1fr) !important;
+    }
+}
+@include respond(small){
+    .vitri-list{
+        gap: 20px;
+        grid-template-columns: repeat(2,1fr) !important;
+    }
+}
