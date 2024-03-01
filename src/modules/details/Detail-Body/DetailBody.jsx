@@ -312,7 +312,7 @@ const DetailBody = ({ data, room }) => {
               <div className="order-body3">
                 <small>
                   Chỗ ở này cho phép tối đa {data.khach} khách, không tính em
-                  bé. Nếu bạn mang theo nhiều hơn 2 thú cưng, vui lòng báo cho
+                  bé. Nếu bạn mang theo thú cưng, vui lòng báo cho
                   Chủ nhà biết.
                 </small>
               </div>

@@ -1,10 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import React, { useState } from "react";
 import { getListLocationAPI } from "../../../apis/locationAPI";
-import { Container } from "react-bootstrap";
+
 import "./vitri.scss";
 import { LocalFireDepartmentSharp } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
+import { Container } from "@mui/material";
 const ViTri = () => {
   const [list, setList] = useState([]);
   const [no, setNo] = useState(8);
@@ -15,7 +16,7 @@ const ViTri = () => {
   let slice = data ? data.slice(0, no) : [];
   const navigate = useNavigate();
   return (
-    <Container>
+    <Container maxWidth="lg">
       <div id="viTri">
         <h2 className="viTri-title">Khám phá điểm đến gần đây</h2>
         <div className="vitri-list">

@@ -8,6 +8,10 @@ import {
   TextField,
   Typography,
   Alert,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
 } from "@mui/material";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -196,15 +200,23 @@ const SignUp = () => {
                       {...register("birthday")}
                     ></TextField>
 
-                    <TextField
-                      label="Giới tính"
-                      fullWidth
-                      error={Boolean(errors.gender)}
-                      helperText={
-                        Boolean(errors.gender) && errors.gender.message
-                      }
-                      {...register("gender")}
-                    ></TextField>
+                    <FormControl fullWidth>
+                      <InputLabel id="demo-simple-select-label">Gender</InputLabel>
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select" 
+                        label="Gender"
+                        error={Boolean(errors.gender)}
+                        {...register("gender")}
+                        helperText={
+                          Boolean(errors.gender) && errors.gender.message
+                        }
+                      >
+                        <MenuItem value={true}>Nam</MenuItem>
+                        <MenuItem value={false}>Nu</MenuItem>
+                        
+                      </Select>
+                    </FormControl>
 
                     <LoadingButton
                       variant="contained"

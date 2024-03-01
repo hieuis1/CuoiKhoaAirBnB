@@ -13,6 +13,7 @@ const Comments = ({ data, room, submit }) => {
   const user = localStorage.getItem("CURRENT_USER")
     ? JSON.parse(localStorage.getItem("CURRENT_USER"))
     : null;
+    console.log(user);
   const [noEmlement, setNoElement] = useState(6);
   const slice = data.slice(0, noEmlement);
   const handleLoadMore = () => {

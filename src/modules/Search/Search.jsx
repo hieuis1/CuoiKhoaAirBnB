@@ -3,7 +3,8 @@ import "./search.scss";
 import { useNavigate, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { getRoomWithLocation } from "../../apis/locationAPI";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
+import { Container } from "@mui/material";
 const Search = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -18,7 +19,7 @@ const Search = () => {
   if (!isPending) {
     return (
       <div id="search" style={{ marginTop: "40px" }}>
-        <Container>
+        <Container maxWidth="lg">
           <div className="search-header">
             <p className="search-title">Hơn 300 chỗ ở- 1 thg 1 - 18 thg 1</p>
             <h1>Chỗ ở tại khu vực bạn đã chọn</h1>
