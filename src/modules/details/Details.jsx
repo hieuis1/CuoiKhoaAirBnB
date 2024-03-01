@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { useParams } from "react-router-dom";
 import DetailHead from "./Detail-Head";
 import DetailBody from "./Detail-Body";
@@ -11,7 +11,7 @@ import {
   getRoomDetailsAPI,
   postComment,
 } from "../../apis/roomAPI";
-import { Container } from "react-bootstrap";
+
 import Comments from "./Comments";
 import { queryClient } from "../../main";
 
@@ -41,7 +41,7 @@ const Details = () => {
   if (!isPending && !commentPending) {
     return (
       <div id="roomDetail">
-        <Container>
+        <Container maxWidth="lg">
           <DetailHead data={data}></DetailHead>
           <DetailBody data={data} room={roomID}></DetailBody>
           <DetailFooter data={data}></DetailFooter>

@@ -5,9 +5,10 @@ import {
   Select,
   TextField,
   InputLabel,
+  Container,
 } from "@mui/material";
 import React, { useState } from "react";
-import { Container, Placeholder } from "react-bootstrap";
+import { Placeholder } from "react-bootstrap";
 import "./khuVuc.scss";
 import { DesktopDatePicker } from "@mui/x-date-pickers";
 import SearchIcon from "@mui/icons-material/Search";
@@ -15,6 +16,7 @@ import { set } from "date-fns";
 import dayjs from "dayjs";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+
 const KhuVuc = ({ list }) => {
   let data = list.map((item) => {
     return { ...item, label: item.tenViTri };
@@ -26,8 +28,9 @@ const KhuVuc = ({ list }) => {
   const [soNguoi, setSoNguoi] = useState(null);
   console.log(viTri);
   const handleSearch = () => {
-    const today = new Date();
-    const select = new Date(ngayDen);
+    const today = new Date(ngayDen);
+    const select = new Date(ngayVe);
+  
     if (viTri == null) {
       Swal.fire({
         icon: "error",
@@ -60,11 +63,12 @@ const KhuVuc = ({ list }) => {
       });
     } else {
       navigate(`/search/${viTri.id}`);
+     
     }
   };
   return (
     <div id="khuVuc">
-      <Container>
+      <Container maxWidth="lg">
         <div className="khuVuc-search">
           <div className="khuVuc-complete">
             <Autocomplete

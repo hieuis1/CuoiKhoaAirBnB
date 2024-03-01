@@ -2,11 +2,12 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import React, { useEffect, useRef } from "react";
 import { Navigate } from "react-router-dom";
 import { editUserApi, getInforUserApi } from "../../apis/userAPI";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import img from "../../assets/pngwing.com (2).png";
 import GppGoodOutlinedIcon from "@mui/icons-material/GppGoodOutlined";
 import {
   Button,
+  Container,
   FormControl,
   FormControlLabel,
   FormLabel,
@@ -127,7 +128,7 @@ const Profile = () => {
   if (!isPending && !orderPending && !listPendding) {
     return (
       <div style={{ marginTop: "50px" }}>
-        <Container>
+        <Container maxWidth="lg" >
           <Row>
             <Col lg={3}>
               <OrderAvatar data={data}></OrderAvatar>
